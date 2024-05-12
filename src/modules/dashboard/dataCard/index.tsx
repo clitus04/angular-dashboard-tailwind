@@ -18,19 +18,19 @@ const DataCard: React.FC<Props> = (props) => {
           <Icon color={iconColor} size={"80%"} />
         </span>
         <div className="flex flex-col items-end">
-          <span className="text-[2.5vw] sm:text-[1.75vw] lg:text-[1vw] text-primary-300">
+          <span className="text-[4vw] sm:text-[2.25vw] lg:text-[1vw] text-primary-300">
             {title}
           </span>
-          <span className="text-[4vw] sm:text-[2.5vw] lg:text-[1.75vw]">
+          <span className="text-[6vw] sm:text-[3.5vw] lg:text-[1.75vw]">
             {value}
           </span>
         </div>
       </div>
       <div className="flex items-center mt-[0.75em]">
-        <span className="w-[1vw]">
+        <span className="w-[3vw] sm:w-[1.75vw] lg:w-[1vw]">
           <FooterIcon size={"100%"} color="#66615B" />
         </span>
-        <span className="text-primary-300 ml-[0.5em] text-[2.5vw] sm:text-[1.75vw] lg:text-[1vw]">
+        <span className="text-primary-300 ml-[0.5em] text-[3vw] sm:text-[1.75vw] lg:text-[1vw]">
           {footerText}
         </span>
       </div>

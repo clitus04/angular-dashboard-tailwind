@@ -9,8 +9,12 @@ const AppLayout: React.FC = () => {
   const [sidebarVisible, setSidebarVisible] = useState<boolean>(true);
 
   useEffect(() => {
+    if (window.screen.width <= 1024) {
+      setCollapsible(true);
+      setSidebarVisible(false);
+    }
     window.addEventListener("resize", () => {
-      if (window.screen.width <= 990) {
+      if (window.screen.width <= 1024) {
         setCollapsible(true);
         setSidebarVisible(false);
       } else {
@@ -31,16 +35,22 @@ const AppLayout: React.FC = () => {
           sidebarVisible={sidebarVisible}
           setSidebarVisible={setSidebarVisible}
         />
-        <div className="p-[2vw]">
+        <div className="p-[5vw] sm:p-[2vw] min-h-[83.5vh]">
           <Outlet />
         </div>
-        <div className="flex justify-between items-center my-[1vh] px-[1.5vw] py-[2vh]">
+        <div className="flex justify-between items-center my-[1vh] px-[5vw] sm:px-[1.5vw] py-[2vh]">
           <div className="flex items-center gap-[1em]">
-            <span className="text-primary-600 text-sm">CREATIVE TIM</span>
-            <span className="text-primary-600 text-sm">BLOG</span>
-            <span className="text-primary-600 text-sm">LICENSES</span>
+            <span className="text-primary-600 text-[2vw] sm:text-[1vw]">
+              CREATIVE TIM
+            </span>
+            <span className="text-primary-600 text-[2vw] sm:text-[1vw]">
+              BLOG
+            </span>
+            <span className="text-primary-600 text-[2vw] sm:text-[1vw]">
+              LICENSES
+            </span>
           </div>
-          <div className="flex items-center text-sm text-primary-600">
+          <div className="flex items-center text-[2vw] sm:text-[1vw] text-primary-600">
             © 2024, made with <FaHeart className="mx-[0.25em]" color="#000" />
             by
             <span className="text-blue-400 cursor-pointer hover:underline ml-1">

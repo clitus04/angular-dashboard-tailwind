@@ -22,17 +22,17 @@ const Sidebar: React.FC<Props> = ({ sidebarVisible }) => {
   return (
     <div
       className={`${
-        sidebarVisible ? "w-[30vw] md:w-[17vw]" : "w-0 overflow-x-hidden"
+        sidebarVisible ? "w-[30vw] sm:w-[20vw] lg:w-[17vw]" : "w-0 overflow-x-hidden"
       } relative`}
     >
-      <div className="px-[3vw] md:px-[1vw]">
+      <div className="px-[3vw] sm:px-[1vw]">
         <div className="h-[9vh] px-[0.5vw] flex items-center border-b">
           <img
-            className="w-[5vw] md:w-[2vw] mr-[0.75em]"
+            className="w-[5vw] sm:w-[2vw] mr-[0.75em]"
             src={angularIcon}
             alt=""
           />
-          <span className="text-primary-300 text-[1.75vw] md:text-[1.1vw]">
+          <span className="text-primary-300 text-[1.75vw] sm:text-[1.1vw]">
             CREATIVE TIM
           </span>
         </div>
@@ -41,11 +41,11 @@ const Sidebar: React.FC<Props> = ({ sidebarVisible }) => {
         {menuItems &&
           menuItems.map(({ id, Icon, name, path }) => (
             <div
-              className="px-[3.5vw] md:px-[1vw] py-[2vh] md:py-[1.25vh] mx-[0.75vw] mt-[1vw] flex items-center cursor-pointer gap-[1vw]"
+              className="px-[3.5vw] sm:px-[1vw] py-[2vh] sm:py-[1.25vh] mx-[0.75vw] mt-[1vw] flex items-center cursor-pointer gap-[1vw]"
               key={id}
               onClick={() => handleNavigate(path)}
             >
-              <span className="w-[4.5vw] md:w-[1.8vw]">
+              <span className="w-[4.5vw] sm:w-[1.8vw]">
                 <Icon
                   size={"100%"}
                   color={isSelectedMenu(path) ? "#EF8157" : "#acacac"}
@@ -56,7 +56,7 @@ const Sidebar: React.FC<Props> = ({ sidebarVisible }) => {
                   isSelectedMenu(path)
                     ? "text-theme-orange"
                     : "text-primary-300"
-                } text-[1.75vw] md:text-[0.85vw]`}
+                } text-[2vw] sm:text-[1vw]`}
               >
                 {name}
               </span>

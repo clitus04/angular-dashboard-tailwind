@@ -14,16 +14,16 @@ const TeamMembers: React.FC = () => {
     }
   }, []);
   return (
-    <div className="rounded-xl overflow-hidden bg-white px-[5%] py-[7%] shadow-md">
-      <div className="text-[1.5vw]">Team Members</div>
+    <div className="rounded-xl overflow-hidden bg-white px-[0.75em] py-[3%] md:py-[7%] shadow-md">
+      <div className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw]">Team Members</div>
       <div className="mt-[1.5vw]">
         {members &&
           members.map(({ id, name, profile, status }) => (
-            <div key={id} className="flex gap-[2vw] items-center mb-[0.75vw]">
-              <img className="w-[2vw] rounded-full" src={profile} alt="" />
+            <div key={id} className="flex gap-[2vw] items-center mb-[4vw] mb:mb-[1.5vw] lg:mb-[0.75vw]">
+              <img className="w-[5vw] md:w-[3vw] lg:w-[2vw] rounded-full" src={profile} alt="" />
               <div className="flex flex-col flex-1">
-                <span className="text-[1vw]">{name}</span>
-                <span className={`${statusColor(status)} text-[0.75vw]`}>{status}</span>
+                <span className="text-[2.5vw] sm:text-[1.75vw] lg:text-[1vw]">{name}</span>
+                <span className={`${statusColor(status)} text-[2vw] sm:text-[1.5vw] lg:text-[0.75vw]`}>{status}</span>
               </div>
               <span className="rounded-full border-2 border-[#6BD098] p-[1.5%]">
                 <MdMail color="#6BD098" />

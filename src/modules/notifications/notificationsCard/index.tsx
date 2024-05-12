@@ -3,11 +3,11 @@ import { data1, data2 } from "./data";
 
 const NotificationsCard = () => {
   return (
-    <div className="bg-white rounded-xl p-[1.5%] shadow-md">
-      <div className="py-[1vh] text-[1.5vw] text-primary-900">
+    <div className="bg-white rounded-xl p-[0.75em] shadow-md">
+      <div className="py-[1vh] text-[4vw] sm:text-[2.5vw] lg:text-[1.5vw] text-primary-900">
         Notifications
       </div>
-      <div className="text-primary-300 text-[1vw]">
+      <div className="text-primary-300 text-[2.5vw] sm:text-[1.75vw] lg:text-[1vw]">
         Handcrafted By Our Friend{" "}
         <span className="text-blue-400 cursor-pointer hover:underline ml-1">
           Robert McIntosh

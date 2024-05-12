@@ -19,7 +19,7 @@ interface Props {
 const NotificationsListCard: React.FC<Props> = ({ title, listItems }) => {
   return (
     <div>
-      <div className="text-[1.5vw] text-primary-900 px-[2%] py-[1.5vw]">
+      <div className="text-[4vw] sm:text-[2.5vw] lg:text-[1.5vw] text-primary-900 px-[2%] py-[1.5vw]">
         {title}
       </div>
       {listItems &&
@@ -31,8 +31,8 @@ const NotificationsListCard: React.FC<Props> = ({ title, listItems }) => {
             >
               <div className="w-[75%] flex items-center">
                 {Icon && (
-                  <span className="px-[0.75vw]">
-                    <Icon size={"2vw"} />
+                  <span className="w-[8vw] lg:w-[5vw] flex justify-center items-center">
+                    <Icon size={"50%"} />
                   </span>
                 )}
                 <div className="flex-1">
