@@ -1,4 +1,4 @@
-import { colors } from "./data";
+import { colors, isKeyOf } from "./data";
 import { IconType } from "react-icons";
 import { LiaTimesSolid } from "react-icons/lia";
 
@@ -27,7 +27,9 @@ const NotificationsListCard: React.FC<Props> = ({ title, listItems }) => {
           ({ id, title, text, variant = "info", Icon, closable = true }) => (
             <div
               key={id}
-              className={`flex items-center justify-between text-white rounded-md p-[2%] mb-[1vw] ${colors[variant]}`}
+              className={`flex items-center justify-between text-white rounded-md p-[2%] mb-[1vw] ${
+                isKeyOf(colors, variant) ? colors[variant] : ""
+              }`}
             >
               <div className="w-[75%] flex items-center">
                 {Icon && (
