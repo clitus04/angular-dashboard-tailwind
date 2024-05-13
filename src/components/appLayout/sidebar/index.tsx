@@ -56,7 +56,7 @@ const Sidebar: React.FC<Props> = ({ sidebarVisible }) => {
                   isSelectedMenu(path)
                     ? "text-theme-orange"
                     : "text-primary-300"
-                } text-[2vw] sm:text-[1vw]`}
+                } text-[2vw] sm:text-[1vw] lg:text-[0.85vw]`}
               >
                 {name}
               </span>
